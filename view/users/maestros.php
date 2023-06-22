@@ -44,7 +44,6 @@ $conexion->close();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1.0/dist/js/adminlte.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
 
     <!-- Link de stilos -->
     <link rel="stylesheet" href="../../style.css">
@@ -67,11 +66,12 @@ $conexion->close();
             </ul>
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
-                <li class="dropdown-menu me">
+                <li class="dropdown me">
                     <a class="dropdown-toggle dropdown-admin d-flex ll" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Administrador
                     </a>
                     <ul class="dropdown-menu asu2">
+                        <li><a href="../../perfil.alumno.php" class="dropdown-item"><i class="bi bi-person-circle mr-2"></i> Perfil</a></li>
                         <li><a class="dropdown-item text-danger" href="../../logout.php"><i class="bi bi-door-open mr-2"></i>Logout</a></li>
                     </ul>
                 </li>
@@ -82,7 +82,7 @@ $conexion->close();
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
+            <a href="#" class="brand-link">
                 <img src="../../img/logoEscudo.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Universidad</span>
             </a>
@@ -162,7 +162,7 @@ $conexion->close();
                                 <div class="card-header">
                                     <div class="row justify-content-between">
                                         <h3 class="card-title d-flex align-items-center">Información de <?= $usuarios ?>s</h3>
-                                        <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-primary">Agregar<?= $usuarios ?></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-primary">Agregar <?= $usuarios ?></button>
                                     </div>
                                 </div>
                                 <!-- /.card-header -->
@@ -272,9 +272,9 @@ $conexion->close();
                     <div class="modal-body">
                         <form action="../../conf/insertDatos.php" method="POST">
                             <input type="hidden" name="id">
-                            <div class="mb-3">
+                            <div class="mb-3 d-none">
                                 <label for="DNI" class="form-label">DNI</label>
-                                <input type="text" class="form-control" name="DNI" required>
+                                <input  type="text" class="form-control" name="DNI" required>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Correo Electronico</label>

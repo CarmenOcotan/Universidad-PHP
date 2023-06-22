@@ -22,7 +22,7 @@
 
 <body>
     <div class="d-flex flex-column align-items-center vh-100 contenedor-principal">
-        <div class="dropdown mt-3 boton-info d-none d-lg-block">
+        <div class="dropdown mt-3 boton-info d-none"> <!-- d-lg-block  se le agrega a la clase para mostrarlo solo en pantalla grande-->
             <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Información Acceso
             </button>
@@ -68,7 +68,7 @@
             }
             ?>
         </form>
-        <div class="mt-3 p-2 d-lg-none bg-white">
+        <div class="mt-3 d-none p-2 bg-white">  <!-- d-lg-none para la clase si se quiere mostrar en vista movil -->
             <p class="d-flex flex-column">
                 <span class="cat">Admin</span>
                 <span>user: admin@admin</span>

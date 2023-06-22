@@ -18,7 +18,7 @@
         $resultado = $stateman->fetch();
         if($resultado!==false){
             $_SESSION['email'] = $email;
-            header('Location:alumno.php');
+            header('Location:admin.php');
         }else{
             $errores .='<div class="alert alert-primary" roles="alert">Correo invalido o Erroneo</div>';
         }
