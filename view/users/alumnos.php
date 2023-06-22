@@ -71,7 +71,8 @@ $conexion->close();
                         Administrador
                     </a>
                     <ul class="dropdown-menu asu2">
-                        <li><a class="dropdown-item text-danger" href="./view/logout.php"><i class="bi bi-door-open mr-2"></i>Logout</a></li>
+                        <li><a href="../../perfil.alumno.php" class="dropdown-item"><i class="bi bi-person-circle mr-2"></i> Perfil</a></li>
+                        <li><a class="dropdown-item text-danger" href="../../logout.php"><i class="bi bi-door-open mr-2"></i>Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -81,7 +82,7 @@ $conexion->close();
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
+            <a href="#" class="brand-link">
                 <img src="../../img/logoEscudo.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Universidad</span>
             </a>
@@ -161,7 +162,7 @@ $conexion->close();
                                 <div class="card-header">
                                     <div class="row justify-content-between">
                                         <h3 class="card-title d-flex align-items-center">Información de <?= $usuarios ?>s</h3>
-                                        <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-primary">Agregar<?= $usuarios ?></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-primary">Agregar <?= $usuarios ?></button>
                                     </div>
                                     <div class="modal fade" id="exampleModal">
                                         <div class="modal-dialog">
@@ -211,7 +212,7 @@ $conexion->close();
                                                 <th>#</th>
                                                 <th>DNI</th>
                                                 <th>Nombre</th>
-                                                <th>Email</th>
+                                                <th>Correo</th>
                                                 <th>Dirección</th>
                                                 <th>Fec. de Nacimiento</th>
                                                 <th>Acciones</th>
@@ -220,22 +221,22 @@ $conexion->close();
                                         <tbody>
                                             <?php
                                             $x = 1;
-                                            foreach ($alumnos as $maestro) {
+                                            foreach ($alumnos as $alumno) {
                                                 // Remove the if condition that checks for "active" key
                                             ?>
                                                 <tr>
 
-                                                    <td><?= $maestro["id"] ?></td>
-                                                    <td><?= $maestro["dni"] ?></td>
-                                                    <td><?= $maestro["nombre"] ?></td>
-                                                    <td><?= $maestro["correo"] ?></td>
-                                                    <td><?= $maestro["direccion"] ?></td>
-                                                    <td><?= $maestro["nacimiento"] ?></td>
+                                                    <td><?= $alumno["id"] ?></td>
+                                                    <td><?= $alumno["dni"] ?></td>
+                                                    <td><?= $alumno["nombre"] ?></td>
+                                                    <td><?= $alumno["correo"] ?></td>
+                                                    <td><?= $alumno["direccion"] ?></td>
+                                                    <td><?= $alumno["nacimiento"] ?></td>
                                                     <td class="text-center">
-                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#examp<?php echo $maestro['id'] ?>" class="text-info mx-2">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#examp<?php echo $alumno['id'] ?>" class="text-info mx-2">
                                                             <i class="bi bi-pencil-square"></i>
                                                         </a>
-                                                        <div class="modal fade" id="examp<?php echo $maestro['id'] ?>">
+                                                        <div class="modal fade" id="examp<?php echo $alumno['id'] ?>">
                                                             <div class="modal-dialog">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
@@ -244,26 +245,26 @@ $conexion->close();
                                                                     </div>
                                                                     <div id="modalUpdateBody" class="modal-body">
                                                                         <form action="../../conf/editarDatos.php" method="POST">
-                                                                            <input type="hidden" name="id" value="<?= $maestro["id"] ?>">
+                                                                            <input type="hidden" name="id" value="<?= $alumno["id"] ?>">
                                                                             <div class="mb-3">
                                                                                 <label for="DNI" class="form-label">DNI</label>
-                                                                                <input type="text" class="form-control" name="DNI" placeholder="Ingresa DNI" value="<?= $maestro["dni"] ?>" readonly>
+                                                                                <input type="text" class="form-control" name="DNI" placeholder="Ingresa DNI" value="<?= $alumno["dni"] ?>" readonly>
                                                                             </div>
                                                                             <div class="mb-3">
                                                                                 <label for="email" class="form-label">Correo Electrónico</label>
-                                                                                <input type="email" class="form-control" name="email" placeholder="Ingresa email" value="<?= $maestro["correo"] ?>" required>
+                                                                                <input type="email" class="form-control" name="email" placeholder="Ingresa email" value="<?= $alumno["correo"] ?>" required>
                                                                             </div>
                                                                             <div class="mb-3">
                                                                                 <label for="name" class="form-label">Nombre(s)</label>
-                                                                                <input type="text" class="form-control" name="name" placeholder="Ingresa tu nombre" value="<?= $maestro["nombre"] ?>" required>
+                                                                                <input type="text" class="form-control" name="name" placeholder="Ingresa tu nombre" value="<?= $alumno["nombre"] ?>" required>
                                                                             </div>
                                                                             <div class="mb-3">
                                                                                 <label for="address" class="form-label">Dirección</label>
-                                                                                <input type="text" class="form-control" name="address" placeholder="Ingresa la dirección" value="<?= $maestro["direccion"] ?>" required>
+                                                                                <input type="text" class="form-control" name="address" placeholder="Ingresa la dirección" value="<?= $alumno["direccion"] ?>" required>
                                                                             </div>
                                                                             <div class="mb-3">
                                                                                 <label for="date" class="form-label">Fecha de nacimiento</label>
-                                                                                <input type="date" class="form-control" name="date" placeholder="Ingresa fecha de nacimiento" value="<?= $maestro["nacimiento"] ?>" required>
+                                                                                <input type="date" class="form-control" name="date" placeholder="Ingresa fecha de nacimiento" value="<?= $alumno["nacimiento"] ?>" required>
                                                                             </div>
                                                                             <div class="modal-footer">
                                                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -274,7 +275,7 @@ $conexion->close();
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <a href="../../conf/eliminarDatos.php?id=<?php echo $maestro['id'] ?>" class="text-danger mx-2"><i class="bi bi-trash3-fill"></i></a>
+                                                        <a href="../../conf/eliminarDatos.php?id=<?php echo $alumno['id'] ?>" class="text-danger mx-2"><i class="bi bi-trash3-fill"></i></a>
                                                     </td>
                                                 </tr>
                                             <?php

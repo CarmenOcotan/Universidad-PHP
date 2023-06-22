@@ -41,6 +41,7 @@ include "./view/head/head.php";
                         Administrador
                     </a>
                     <ul class="dropdown-menu asu2">
+                        <li><a href="./perfil.alumno.php" class="dropdown-item"><i class="bi bi-person-circle mr-2"></i> Perfil</a></li>
                         <li><a class="dropdown-item text-danger" href="./logout.php"><i class="bi bi-door-open mr-2"></i>Logout</a></li>
                     </ul>
                 </li>
@@ -51,7 +52,7 @@ include "./view/head/head.php";
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
+            <a href="#" class="brand-link">
                 <img src="./img/logoEscudo.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Universidad</span>
             </a>
