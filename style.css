@@ -1,0 +1,129 @@
+body {
+    background-color: #fff5d2;
+}
+
+.contenedor-principal {
+    position: relative;
+}
+
+.boton-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+.form_container {
+    width: 360px;
+    /* height: fit-content; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   /*  gap: 15px; */
+    padding: 50px 40px 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+    0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+    0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  /*  border-radius: 11px; */
+    font-family: "Inter", sans-serif;
+    color: #495057;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.input-group-text {
+    background-color: transparent;
+    border-left: 0;
+    color: #495057;
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.form-control {
+    border-right: 0;
+}
+
+.input-group:focus-within .form-control,
+.input-group:focus-within .input-group-text {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.input-group:focus-within .input-group-text i {
+    color: #495057;
+}
+
+.fecha {
+    background-color: transparent;
+    border-right: 1px;
+    color: #495057;
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.cat {
+    font-weight: 500;
+}
+
+
+.asu2 {
+    left: inherit;
+    right: 1px;
+}
+
+.me {
+    margin-right: 15px;
+    color: black;
+}
+
+
+.dropdown-admin::after {
+    content: url('./img/chevron-down.svg');
+    margin-left: 5px;
+    border-top: 0;
+    margin-top: 3px;
+
+}
+
+.dropdown-admin {
+    padding-right: 1rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.ll {
+    color: #00000080;
+}
+
+.ll:hover {
+    color: #000000E6;
+}
+
+.tit {
+    font-weight: 400;
+}
+
+.registro {
+    text-decoration: none;
+    color: #551A8B
+}
+
+.inicio {
+    background-image: url("./img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
